@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+html, body{
+    margin: 0;
+    font-size: 18px; //안 써주면 기본 16px
+}
+
+ul, li{
+    list-style: none;
+    margin: 0; padding: 0;
+}
+
+img{vertical-align: middle;}
+
+h1, h2, h3, h4, h5, h6, p, figure{margin: 0;}
+
+h2{color: #222; font-size: 3rem;} //18px*3
+h3{color: #222; font-size: 1.4rem;} //18px*1.4
+
+*{box-sizing: border-box; color: #777;}
+
+
+
+//헤더&푸터
+$wid: 1300px;
+$c-point: #fed136;
+
+header{
+    z-index: 99999;
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+
+    div{
+        width: $wid; margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 60px;
+
+        h1{
+
+            a{color: $c-point;}
+        }
+        
+        nav{
+            
+            a{color: #fff; padding: 0 30px;}
+        }
+    }
+}
+
+.visual{
+    figure{
+        position: relative;
+
+        img{width: 100%;}
+        
+        figcaption{
+            position: absolute;
+            left: 0; top: 0;
+            color: #fff;
+            width: 100%; height: 100%;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 4rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media (max-width: 767px){
+    $wid: 100%;
+    $c-point: #fed136;
+    
+    header{
+        z-index: 99999;
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%;
+    
+        div{
+            width: $wid; margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 60px;
+            text-align: center;
+    
+            h1{
+    
+                a{color: $c-point;}
+            }
+            
+            nav{display: none;
+                
+                a{color: #fff; padding: 0 30px;}
+            }
+        }
+    }
+    
+    }
+//버튼, 인풋, 테이블, 라벨, 아이콘
+
+
+
+//사이즈, 여백
